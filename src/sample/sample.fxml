@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller" minWidth="700" minHeight="700" >
+   <top>
+      <Label text="Address Book" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <ListView id="list" fx:id="list" onMouseClicked="#show" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField promptText="Firstname" id="FName" fx:id="FName"/>
+            <TextField promptText="Lastname" id="LName" fx:id="LName" />
+            <TextField promptText="Telephone number" id="TelNum" fx:id="TelNum"/>
+            <TextField promptText="Street" id="Street" fx:id="Street"/>
+            <TextField promptText="Building number" id="BNum" fx:id="BNum"/>
+            <TextField promptText="Local number" id="LNum" fx:id="LNum" />
+            <TextField promptText="Postcode" id="PCode" fx:id="PCode"/>
+            <TextField promptText="General delivery" id="GenDel" fx:id="GenDel"/>
+            <Button mnemonicParsing="false" text="Save Contact" fx:id="saveBut" onAction="#newContact"/>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField promptText="Type Name Here" fx:id="searchField"/>
+            <Button mnemonicParsing="false" text="Search" fx:id="searchBut" onAction="#search" />
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="FNameLab"/>
+            <Label fx:id="LNameLab"/>
+            <Label fx:id="TelNumLab"/>
+            <Label fx:id="StrLab"/>
+            <Label fx:id="BuildNumLab"/>
+            <Label fx:id="FlNumLab"/>
+            <Label fx:id="PCodeLab"/>
+            <Label fx:id="GenDelLab"/>
+            <Button mnemonicParsing="false" text="Delete Contact" fx:id="delBut" onAction="#delete"/>
+            <Button mnemonicParsing="false" text="Edit Contact" fx:id="editBut" onAction="#editContact"/>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
